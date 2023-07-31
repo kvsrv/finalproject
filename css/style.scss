@@ -159,10 +159,10 @@ h2{
 
 #game{
     display:flex;
+    flex-direction: column;
     justify-content: space-around;
     border-radius:10px;
     box-shadow: 0 0 0 2px rgb(0, 0, 0);
-    min-width: 500px;
     max-width: 900px;
     padding: 10px;
 
@@ -196,15 +196,11 @@ h2{
 }
 
 
-@media (min-width:700px) {
-    #output{
+@media (min-width:510px) {
+    #game{
+        min-width: 450px;
         display: flex;
-        justify-content: space-around;
-        max-width: 700px;
-        flex-wrap: wrap;
-    }
-    #gallery{
-        justify-content: center;
+        flex-direction: row;
     }
 
 }
