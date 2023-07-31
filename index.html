@@ -8,6 +8,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="scripts/jquery-3.7.0.min.js"></script>
+        <script src="scripts/finalprojectscript.js" defer="defer"></script>
     </head>
     <body>
         <header>
@@ -16,7 +19,53 @@
         <div id="wrapper">
             <div id="container">
                 <main>
+                    <div id="game">
+                        <section>
+                            <h2>You</h2>
+                            <div>
+                                <img class="dices" id="user-dice1" src="images/dice-6.jpg" alt="">
+                                <img class="dices" id="user-dice2" src="images/dice-5.jpg" alt="">
+                            </div>
+                            <p id="user-roll">Roll</p>
+                            <p id="user-totalScore">Total Score</p>
+                        </section>
+                        <section>
+                            <h2>Opponent</h2>
+                            <div>
+                                <img class="dices" id="op-dice1" src="images/dice-4.jpg" alt="">
+                                <img class="dices" id="op-dice2" src="images/dice-3.jpg" alt="">
+                            </div>
+                            <p id="op-roll">Roll</p>
+                            <p id="op-totalScore">Total Score</p>
+                        </section>
+                    </div>
+                    <div id="buttons">
+                        <button id="howToPlay">How To Play</button>
+                        <button id="roll">Roll</button>
+                        <button id="newGame">New Game</button>
+                    </div>
                 </main>
+                <article id="howToPlay-popup">
+                    <div>
+                        <button id="closeHTP-popup">X</button>
+                        <h2>How To Play</h2>
+                        <ul>
+                            <li>Click on 'Roll' and play 3 rounds to finish the game.</li>
+                            <li>The sum of your dices count as your score.</li>
+                            <li>If you roll a 1, your score will count as 0.</li>
+                            <li>If you roll a double, your score will be doubled as well.</li>
+                            <li>The player with the highest score wins.</li>
+                            <li>To start a new game, click on 'New Game'.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article id="finalScore-popup">
+                    <div>
+                        <button id="closeFS-popup">X</button>
+                        <h2 id="finalScore"></h2>
+                        <button id="newGame2">New Game</button>
+                    </div>
+                </article>
             </div>
             <footer> Author @kasra</footer>
         </div>

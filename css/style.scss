@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+$background-image :url("../images/bg.jpg");
+$background-color: #016e11;
+@mixin bg-color($color){
+    background-color: $color;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+header {
+    color:#a8dadc;
+    background-color: #003d09;
+}
+
+header:hover {
+    color:#a36332;
+}
+
+body {
+    min-width: 300px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; 
+    background-image: $background-image;
+    text-align: left;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    color: #e7c6ff;
+    padding: 10px;
+    margin-bottom: 0;
+    
+}
+
+
+img{
+	max-width: 100%;
+	height:auto;	
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color:#c43a3a;
+    font-size: large;
+}
+
+
+a:hover, a:focus {
+    color: #3142a3;
+    font-size: larger;
+    font-weight: bold;
+}
+
+strong {
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: bold;
+}
+span{
+    font-weight:bold;
+}
+
+#wrapper {
+    @include bg-color($background-color);
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    background-color: #a8dadc;
+    box-shadow: 0px 0px 2px 0px black;
+    margin-left: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 3px;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border: 2px solid rgb(6, 31, 0);
+    box-shadow: 0px 0px 4px 0px black;
+    max-width: 800px;
+    div {
+        display: flex;
+        justify-content: center;
+        padding:2px;
+    }
+}
+
+h2{
+    margin-top: 0
+}
+
+#howToPlay-popup,#finalScore-popup{
+    display: none;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    background-color: rgb(61, 60, 60, 0.7);
+    color:rgb(14, 10, 10);
+    width:100vw;
+    height:100vh;    
+	z-index:10;
+    div{
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%, -50%);
+        max-width:400px;
+        min-width:200px;
+        padding: 10px;
+        border-radius:10px;
+        box-shadow: 0 0 0 2px rgb(145, 197, 199);
+        background-color: #a8dadc;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+
+#closeHTP-popup,#closeFS-popup{
+    position:absolute;    
+    top:-20px;
+    right:20px;
+    cursor:pointer;
+}
+
+#game{
+    display:flex;
+    justify-content: space-around;
+    border-radius:10px;
+    box-shadow: 0 0 0 2px rgb(0, 0, 0);
+    min-width: 500px;
+    max-width: 900px;
+    padding: 10px;
+
+}
+
+#buttons{
+    display:flex;
+    justify-content:center;
+    justify-content: space-around;
+}
+
+#newGame2{
+    width: 65px;
+}
+
+#finalScore-popup{
+    div{
+        display:flex;
+        flex-direction: row;
+        justify-content:center;
+        flex-wrap: wrap;
+    }
+}
+
+.dices{
+    max-width: 75px;
+    border-radius:13px;
+    border: 1px rgb(0, 0, 0);
+    box-shadow: 2px 1px 1px 0px rgb(0, 0, 0);
+
+}
+
+
+@media (min-width:700px) {
+    #output{
+        display: flex;
+        justify-content: space-around;
+        max-width: 700px;
+        flex-wrap: wrap;
+    }
+    #gallery{
+        justify-content: center;
+    }
+
+}
+
